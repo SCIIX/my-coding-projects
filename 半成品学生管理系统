@@ -1,0 +1,84 @@
+# #设置管理员信息
+user0={'name':'sun','password':123}
+alluser=[]
+alluser.insert(0,user0)
+#编写构建字典函数以及输入
+def dicts():
+    name=str(input("new name:"))
+    password=str(input("\n his/her password:"))
+    dict={name:password}
+    return dict
+
+##这里不会写..
+def bu():
+    inputs='q'
+
+    while inputs == 'q':
+        a = int(input("hi!\npress 1 to add\t\tpress 2 to del\n"
+                      "press 3 to check\tpress 4 to exit such block!\n"))
+        if a==1:
+            con=dicts()
+            alluser.append(con)
+            inputs = str(input("step to press 'q'"))
+        elif a==2:
+            print(alluser)
+            num=int(input("which one to delete?\n"))
+            del alluser[num-1]
+            print('now we have: ',alluser)
+            inputs = str(input("step to press 'q'"))
+        elif a ==3:
+            print(alluser)
+            inputs = str(input("step to press 'q'"))
+        elif a==4:
+            break
+
+'''block2'''
+from liziyang import user0#导入管理员权限
+#from liziyang import sm#导入学生管理系统
+from liziyang import bu
+
+def system01():
+    print("hello my lord,what do you need ?\n")
+    direction = int(input('\npress 1 : do nothing\npress 2 enter system' \
+                          '\npress 3 to exit\n'))
+    if direction == 3:
+        pass
+    elif direction == 1:
+        pass
+    elif direction == 2:
+        system02()
+
+def system02():
+    print("hello my lord,what do you need ?\n")
+    direction = int(input('\npress 1 :add/delete/check users \npress 2 :inter student management system ' \
+                          '\npress 3 to back last term \n'))
+    if direction == 2:
+        sm()
+    elif direction == 1:
+        bu()
+        system02()
+    elif direction == 3:
+        system01()
+
+
+
+name_1=str(input("你好!欢迎来到学生管理系统1.0!\n"
+                 "请输入管理员信息:\n用户名:"))
+name_1=name_1.lstrip()
+password_1=int(input('密码:'))
+if (name_1==user0['name'])and (password_1==user0['password']):
+    print("欢迎您,我的主人!\n")
+    system01()
+else:
+    print('你不是我的主人!再见!')
+
+
+
+
+
+
+
+
+
+
+
