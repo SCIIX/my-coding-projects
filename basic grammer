@@ -1,0 +1,92 @@
+#数值运算符
+# print(9/2,9//2,9*2,9**2,9%2)
+# # 9%2是取余操作
+#
+# print(
+#     1+2*3,(1+2)*3
+# )
+#逻辑运算符
+'''短路求值:对于第一个例子来说
+a = 1 and 9,判断1 是不够的,还需要判断9,所以a取值为9
+而对于第二个例子来说,判断a=9即可满足True'''
+# a=1 and 9
+# a=9 or 3
+# a=[0,0]#非空即是1
+# if a :
+#     print('yes')
+#     print(a)#注意a取值
+# elif a==0 :
+#     print('no')
+#
+# print('*'*95)
+
+#成员运算符
+# a=[0,1,2,3,4,5]
+# print(0 in a)
+# b={1:2,3:"s"}
+# print(3 in b)#key only index search
+# print('s' in b[3])# 3 is not 切片
+#
+# #身份运算符 and 关系运算符 比较的是id
+# a=[1,2]
+# b=[1,2]
+# print(a is b)
+# print(a == b)
+# print(a != b)
+# print(a >= b)
+# print(id(a))
+# print(id(b))
+
+
+'''下面就基本数据类型进行一些研究和探讨'''
+#列表 list
+# a=[1,2,3,4,'hello','bye']
+# a.append('end')
+# a.insert(0,0)
+# a.insert(1,'hi')
+# print(a)
+# a.remove('hello')
+# # del a [-2]
+# print(a)
+# for i in range(2):
+#     print(i)
+#     a.pop(0)
+#     a.pop()#默认为栈的弹出
+# print(a)
+
+# b=[1,2,3,4,5,6,7,8,9,10,11]
+# # c=b[:]
+# # c=b[2:4]
+# c=b[:3]
+# print(c,len(c))
+
+# a=[0,1,2]
+# a[0]='abs'#change 元素
+# print(a)
+# '''as above we have:'''
+
+# a=[0,1,2,3]
+# print('origin a :',a,id(a))
+# l=len(a)
+# for i in range(l):
+#     a[i]=i**2
+# print(a,id(a))
+
+
+
+#set集合
+# a={'a':'cds','b':125,2:4,3:6,4:9}
+# print(a)
+# a['look']=126
+# print(a)
+# del a['a']
+# a['look']='changed'
+# print(a)
+
+
+#遍历字典
+a={'a':'hello','b':125,2:4,3:6,4:9}
+for i,j in a.items():
+    print(i,j)
+for i in a.keys()
+...
